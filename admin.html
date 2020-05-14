@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css"></link>
+    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js" type="text/javascript"></script>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script src="script.js" type="text/javascript"></script>
+    <style type="text/css">
+    body {
+      background-color: black;
+    }
+    .ui.menu .item img.logo {
+      margin-right: 1.5em;
+    }
+    .main.container {
+      margin-top: 7em;
+    }
+    .wireframe {
+      margin-top: 2em;
+    }
+    .ui.footer.segment {
+      margin: 5em 0em 0em;
+      padding: 5em 0em;
+    }
+    .ui.green.label{
+      font-size: 18px;
+    }
+    .ui.inverted.form label{
+      font-size: 16px;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <i class="subway large icon teal"></i>
+          Movie Ticketing System
+        </a>
+        <a href="#" class="item">Home</a>
+      </div>
+    </div>
+    <div class="ui main text container">
+      <div class="ui inverted segment">
+        <div class="ui green ribbon label">Create Theater</div>
+        <div class="ui horizontal clearing divider">
+        </div>
+        <div id = "createTheaterResponse"class="ui label fluid"></div>
+        <div class="ui inverted form">
+          <div class="two fields">
+            <div class="field">
+              <label>Theater Name</label>
+              <input id = "name" placeholder="Theater Name" type="text">
+            </div>
+            <div class="field">
+              <label>Theater Location</label>
+              <input id = "location" placeholder="Theater Location" type="text">
+            </div>
+          </div>
+
+          <div id = "createTheater" class="ui teal submit button">Submit</div>
+          <div id = "createTheaterReset" class="ui red submit button">Reset</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui main text container">
+      <div class="ui inverted segment">
+        <div id = "listTheaters" class="ui teal submit button">List Theaters</div>
+        <table id = "listTheatersTable" class="ui inverted table">
+          <thead>
+            <tr>
+              <th>Theater ID</th>
+              <th>Theater Name</th>
+              <th>Theater Location</th>
+              <th>Add Seats</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!--MODAL -->
+    <div class="ui modal mini">
+      <div class="header">Add Seats</div>
+      <div class="content">
+        <div class="ui input">
+          <label class="ui label blue">Total Seats</label>
+          <input id="seatsToAdd"  type="number" step="1" min="10" placeholder="total">
+        </div>
+        <div class="ui horizontal divider"></div>
+        <div class="ui input">
+          <label class="ui label blue">Indicator</label>
+          <input id="indicator" type="number" step="1" min="1" placeholder="indicator">
+        </div>
+      </div>
+      <div class="actions">
+        <div class="actions">
+         <div class="ui button green" id="addSeats">Add</div>
+         <div class="ui button red cancel">Cancel</div>
+       </div>
+      </div>
+    </div>
+  </body>
+
+</html>
